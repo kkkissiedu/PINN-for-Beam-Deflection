@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# PyTorch checkpoints
+saved_models/
+*.pth
+*.pt
+
+# TensorBoard
+runs/
+
+# Visualisation outputs (regenerate with visualise.py)
+visualisations/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp

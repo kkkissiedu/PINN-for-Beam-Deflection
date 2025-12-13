@@ -14,6 +14,8 @@ This repository contains the implementation of a **Physics-Informed Neural Netwo
 
 Instead of relying on a large dataset of pre-solved examples, the model learns by minimizing a loss function that penalizes violations of the governing physics and boundary conditions. This approach showcases a powerful method for solving complex engineering problems where data is scarce but the physical laws are well-understood.
 
+The repository also tackles the **inverse problem**: recovering the unknown distributed load `q` from a handful of sparse, noisy deflection measurements along the beam. The same PINN architecture treats `q` as a learnable parameter and jointly fits the network and the load so that the predicted deflection matches the sensors while obeying the Euler-Bernoulli equation at the collocation points.
+
 ---
 
 ## ⚙️ How It Works
@@ -29,7 +31,12 @@ By minimizing the combined loss, the network is forced to discover a solution th
 
 ## 📈 Results
 
-The trained PINN produces a deflection curve that is nearly identical to the exact analytical solution, demonstrating its ability to successfully learn and apply the governing physical laws.
+| Problem  | Max Abs Error | Relative L2 Error |
+|----------|---------------|-------------------|
+| Forward  | TBD           | TBD               |
+| Inverse  | TBD           | TBD               |
+
+> Placeholder values — run `python evaluate.py` to populate.
 
 ![comparison](beam_deflection_comparison.png)
 
